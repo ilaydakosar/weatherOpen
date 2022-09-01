@@ -1,0 +1,150 @@
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap");
+
+* {
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Inter;
+    font-style: normal;
+    background-color: #F8F9FC;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 320px;
+    border: 1px solid #F2F1F5;
+    border-radius: 8px;
+    padding: 32px 48px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px -4px rgba(41, 48, 86, 0.2);
+    transform: translateY(16px);
+    transition: all 0.4s cubic-bezier(0.56, 0.01, 0, 0.99);
+}
+
+    .card:hover {
+        transform: translateY(0px);
+        box-shadow: 0px 10px 16px -9px rgba(41, 48, 86, 0.6);
+    }
+
+        .card:hover .chip {
+            background-color: #3C4CC7;
+            color: #F8F9FC;
+            transition: all 0.4s cubic-bezier(0.56, 0.01, 0, 0.99) 0.075s;
+        }
+
+            .card:hover .chip svg > path {
+                fill: #FFFFFF;
+            }
+
+        .card:hover h1 {
+            color: #F8F9FC;
+        }
+
+        .card:hover button {
+            background-color: #477EF9;
+            color: #F8F9FC;
+        }
+
+        .card:hover .accent-line {
+            transform: translateY(0%);
+        }
+
+    .card .chip {
+        display: flex;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        padding: 8px 12px;
+        font-weight: 450;
+        color: #477EF9;
+        gap: 8px;
+        background-color: #E8EFFF;
+        border-radius: 4px;
+        z-index: 1;
+        transition: all 0.4s cubic-bezier(0.56, 0.01, 0, 0.99);
+    }
+
+        .card .chip svg > path {
+            fill: #477EF9;
+            transition: all 0.4s cubic-bezier(0.56, 0.01, 0, 0.99) 0.075s;
+        }
+
+    .card h1 {
+        font-weight: 700;
+        font-size: 40px;
+        color: #293056;
+        z-index: 1;
+        transition: all 0.4s cubic-bezier(0.56, 0.01, 0, 0.99) 0.025s;
+    }
+
+    .card button {
+        padding: 16px 40px;
+        color: #7DC3B3;
+        background-color: #FFFFFF;
+        border: 2px solid #F2F1F5;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        z-index: 1;
+        transition: all 0.2s cubic-bezier(0.56, 0.01, 0, 0.99);
+        cursor: pointer;
+    }
+
+        .card button:hover {
+            background-color: #3C4CC7;
+            transform: translateY(-1px);
+            box-shadow: 0px 4px 20px rgba(41, 48, 86, 0.2);
+            border: 2px solid #3C4CC7;
+        }
+
+    .card .accent-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 101%;
+        background-color: #477EF9;
+        transform: translateY(97%);
+        z-index: 0;
+        transition: all 0.3s cubic-bezier(0.56, 0.01, 0, 0.99);
+    }
